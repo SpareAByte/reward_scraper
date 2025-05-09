@@ -3,20 +3,21 @@
 import json
 import importlib
 
-#Load job handlers
+#Load handlers.
 with open ('job_handler.json', 'r') as f:
     job_handler = json.load(f)
 
-#Iterate through key/value to bring up the handler or function
+#Iterate through key/value to bring up the handler or function.
 for site_name, job_config in job_handler.items():
     handler_path = job_config.get('handler')
 
-    #You should not see this unless you have a typo
+    #You should not see this unless you have a typo.
     if not handler_path:
         print(f"No handler found for {site_name}.")
         continue
     
     try:
+        #Splits the key/value into useable parts.
         module_path, class_name = handler_path.rsplit('.', 1)
         module = importlib.import_module(module_path)
         HandlerClass = getattr(module, class_name)
