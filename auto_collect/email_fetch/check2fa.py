@@ -1,3 +1,5 @@
+"""Beware this assumes a 8 digit code, further work will need to be done per request"""
+
 import re
 import os.path
 import base64
