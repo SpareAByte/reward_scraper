@@ -64,6 +64,7 @@ class LuckyBirdHandler:
 
             sleep(5)
             checkup2fa = driver.find_elements(By.CLASS_NAME, 'loginTwoFactor_input')
+            #Some(most if you want to cash out) require 2fa, luckybird is tricky as it will accept for 24hours.
             if len(checkup2fa) > 0:
                 print("2FA code required. Processing...")
                 checker = Check2fa()
