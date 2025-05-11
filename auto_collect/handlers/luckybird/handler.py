@@ -30,6 +30,7 @@ class LuckyBirdHandler:
         should_login = True
         
         if os.path.exists(cookie_path):
+            #Cookie injection is not working for this site, I suggest submiting 'n' to proceed if set up. I left this here for your learning.
             continue_login = input("Cookies found. Do you want to load them? (y/n): ").strip().lower()
             if continue_login == 'y':
                 print("Loading cookies...")
