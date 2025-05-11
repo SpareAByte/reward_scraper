@@ -27,6 +27,7 @@ for site_name, job_config in job_handler.items():
     
     print(f"\n--- Running handler for {site_name} ---")
     try:
+        #Runs your site based from json.
         handler = HandlerClass()
         handler.run()
     except Exception as e:
