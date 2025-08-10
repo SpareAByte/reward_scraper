@@ -24,7 +24,7 @@ class LuckyBirdHandler:
 
         driver = webdriver.Chrome()
 
-        driver.get('https://www.luckybird.io')
+        driver.get('https://www.')
         sleep(1)
         
         should_login = True
@@ -100,3 +100,4 @@ class LuckyBirdHandler:
         
 if __name__ == '__main__':
     LuckyBirdHandler().run()
+
